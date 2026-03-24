@@ -1,37 +1,39 @@
+import seriesData from "../api/movies.json";
+
 const NetflixSeries = () => {
-  const name = "The Class of Super Monsters";
-  const genre = "Comedy";
-  const rating = "8.1";
-  let age = 19;
-  const canWatch = () => {
-    if (age >= 18) {
-      return "Can Watch";
-    } else {
-      return "Not available";
-    }
-  };
-  const about = () => {
-    const about =
-      "Super Monsters (sometimes referred to as “The Class of Super Monsters”) is a colorful animated preschool series created by Avi Arad that follows a group of young children who transform into little monsters when the sun goes down. The show originally premiered on Netflix and is designed for young audiences, teaching friendship, teamwork, and confidence.";
-
-    return about;
-  };
-
   return (
     <div>
-      <div>
-        <img src="kids.webp" alt="kids.webp" width="30%" height="30%"></img>
-      </div>
+      {seriesData.map((series) => {
+        const canWatch = () => {
+          return parseFloat(series.rating) >= 8
+            ? "Recommended"
+            : "Average";
+        };
 
-      <h2> Show Name : {name} </h2>
-      <h2> Genre : {genre} </h2>
-      <h3> Rating : {rating} </h3>
-      <p> Story : {about()} </p>
+        return (
+          <div key={series.id}>
+            <img
+              src={series.img_url}
+              alt={series.name}
+              width="30%"
+              height="30%"
+            />
 
-      <button> {canWatch()} </button>
+            <h2>Show Name: {series.name}</h2>
+            <h3>Genre: {series.genre.join(", ")}</h3>
+            <h4>Rating: {series.rating}</h4>
+            <p>Story: {series.description}</p>
+
+            <button>{canWatch()}</button>
+
+            <br />
+            <br />
+          </div>
+        );
+      })}
     </div>
   );
 };
 
+export default NetflixSeries;
 
-export default NetflixSeries; 
