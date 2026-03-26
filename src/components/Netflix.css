@@ -1,0 +1,24 @@
+.common-heading {
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  box-shadow: var(--btn-box-shadow);
+  padding: 1.5rem;
+  transition:
+    transform 300ms,
+    box-shadow 300ms;
+}
+
+width {
+  width: 100%;
+}
+
+.card-content {
+  padding: 3.2rem 1.2 rem;
+  display: flex;
+  flex-direction: column;
+}
+
