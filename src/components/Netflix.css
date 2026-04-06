@@ -1,24 +1,83 @@
-.common-heading {
-  margin-bottom: 2rem;
+/* Reset a bit */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Card container */
 .card {
-  background-color: var(--white-color);
-  border-radius: 0.5rem;
-  box-shadow: var(--btn-box-shadow);
-  padding: 1.5rem;
+  list-style: none;
+  width: 300px;
+  margin: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition:
-    transform 300ms,
-    box-shadow 300ms;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-width {
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.card img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
+/* Content inside card */
 .card-content {
-  padding: 3.2rem 1.2 rem;
-  display: flex;
-  flex-direction: column;
+  padding: 15px;
 }
 
+/* Titles */
+.card-content h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-content h3,
+.card-content h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+/* Description */
+.card-content p {
+  font-size: 13px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Button */
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff4c4c;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e04343;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
