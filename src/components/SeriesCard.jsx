@@ -8,11 +8,9 @@ export const SeriesCard = ({ data }) => {
       <div className="card-content">
         <h2>{name}</h2>
         <h3>{genre.join(", ")}</h3>
-
         <p className="rating">⭐ {rating}</p>
-
-        <p className="description">{description}</p>
-
+        {/* <p className="description">{description}</p> */}
+        <p className="text-3xl font-bold underline">{description}</p>
         <button className="btn">Watch Now</button>
       </div>
     </li>

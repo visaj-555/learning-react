@@ -1,4 +1,5 @@
-/* Grid container */
+/* your custom styles below */
+
 .grid {
   display: grid;
   gap: 20px;
@@ -6,12 +7,10 @@
   list-style: none;
 }
 
-/* 3 columns layout */
 .grid-three--cols {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Responsive (very important 🔥) */
 @media (max-width: 1024px) {
   .grid-three--cols {
     grid-template-columns: repeat(2, 1fr);
