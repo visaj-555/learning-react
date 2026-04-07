@@ -1,5 +1,7 @@
 /* your custom styles below */
 
+@import "tailwindcss";
+
 .grid {
   display: grid;
   gap: 20px;
