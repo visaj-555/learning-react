@@ -3,6 +3,7 @@ import "./components/Netflix.css";
 import { EventHandling } from "./components/EventHandling";
 import { EventProps } from "./components/EventProps";
 import { EventPropagation } from "./components/EventPropogation";
+import { State } from "./components/state";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <NetflixSeries /> */}
       {/* <EventHandling /> */}
       {/* <EventProps /> */}
-      <EventPropagation />
+      {/* <EventPropagation /> */}
+      <State />
     </section>
   );
 }
